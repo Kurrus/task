@@ -19,7 +19,7 @@ const getTasks = async (context) => {
         response = response.filter(task => task.status === router.currentRoute.query.status)
     }
     if (router.currentRoute.query.overdue) {
-        response = response.filter(task => task.deadline > Date.now())
+        response = response.filter(task => task.deadline < Date.now())
     }
 
 

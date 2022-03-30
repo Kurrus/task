@@ -18,7 +18,7 @@
           </ul>
           <p class="description">{{task.description}}</p>
         </div>
-        <p class="deadline">{{task.deadline | date('date')}}</p>
+        <p class="deadline">{{task.deadline | date('datetime')}}</p>
         <p class="status">{{getStatus(task.status)}}</p>
 
       </router-link>
