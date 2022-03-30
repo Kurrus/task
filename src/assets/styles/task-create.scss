@@ -1,0 +1,36 @@
+.task-create{
+
+  &__form{
+
+  }
+  &__form-group{
+    small{
+      margin-top: -12px;
+      margin-bottom: 12px;
+      color: tomato;
+      display: block;
+    }
+    textarea{
+      height: 200px;
+    }
+  }
+  .vue-tags-input{
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+  .ti-input{
+    padding: 0 !important;
+    margin: 0 !important;
+
+    input{
+      margin-bottom: 0 !important;
+      border: 0 !important;
+    }
+  }
+  .ti-new-tag-input-wrapper{
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
