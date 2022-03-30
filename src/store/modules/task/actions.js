@@ -1,5 +1,5 @@
 import router from "../../../router";
-import { v4 as uuid } from 'uuid';
+import {v4 as uuid} from 'uuid';
 
 const createTask = async (context, fields) => {
     context.commit('setTask', {...fields, status: 'started', id: uuid()})
@@ -15,7 +15,7 @@ const getTasks = async (context) => {
     if (router.currentRoute.query.tag) {
         response = response.filter(task => task.tags.map(el => el.text).includes(router.currentRoute.query.tag))
     }
-    if (router.currentRoute.query.status){
+    if (router.currentRoute.query.status) {
         response = response.filter(task => task.status === router.currentRoute.query.status)
     }
     if (router.currentRoute.query.overdue) {

@@ -30,10 +30,6 @@
 import Filters from "../components/page-elements/Filters";
 export default {
   components: {Filters},
-  data() {
-    return {
-    }
-  },
   async created() {
     await this.$store.dispatch('getTasks')
   },

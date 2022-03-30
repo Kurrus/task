@@ -4,7 +4,7 @@ const setTask = (state, payload) => {
 };
 
 const setTaskUpdate = (state, payload) => {
-    state.tasks.map((task, index)=> {
+    state.tasks.map((task, index) => {
         if (task.id === payload.id) {
             state.tasks[index] = payload
         }
@@ -21,9 +21,9 @@ const setTaskInfo = (state, payload) => {
 };
 
 const setTags = (state, payload) => {
-    if (state.tags.length){
+    if (state.tags.length) {
         state.tags = [...payload.filter(tag => !state.tags.map(el => el.text).includes(tag.text)), ...state.tags]
-    }else {
+    } else {
         state.tags = payload
     }
     localStorage.setItem('tags', JSON.stringify(state.tags));

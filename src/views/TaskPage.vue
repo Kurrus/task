@@ -7,7 +7,7 @@
         <small v-if="!$v.name.required && $v.name.$dirty">Введите название</small>
       </div>
       <div class="task-create__form-group">
-        <label for="tags">Теги</label>
+        <label>Теги</label>
         <vue-tags-input
             id="tags"
             v-model="tag"
@@ -18,8 +18,8 @@
         />
       </div>
       <div class="task-create__form-group">
-        <label for="description">Описание*</label>
-        <textarea id="description" v-model="description" placeholder="Напишете описание задачи"></textarea>
+        <label>Описание*</label>
+        <textarea v-model="description" placeholder="Напишете описание задачи"></textarea>
         <small v-if="!$v.description.required && $v.description.$dirty">Введите описание</small>
         <small v-if="!$v.description.maxLength && $v.description.$dirty">Описане не должно превышать
           {{ $v.description.$params.maxLength.max }} символов.</small>
@@ -29,8 +29,8 @@
         <date-picker id="deadline" lang="ru" v-model="deadline" value-type="timestamp"></date-picker>
       </div>
       <div class="task-create__form-group">
-        <label for="status">Статус</label>
-        <select id="status" v-model="currentStatus">
+        <label>Статус</label>
+        <select v-model="currentStatus">
           <option v-for="(item, index) in status" :key="index" :value="item.value">{{ item.text }}</option>
         </select>
       </div>
